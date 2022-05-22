@@ -1,0 +1,15 @@
+body {
+  background-color: whitesmoke;
+  margin: 0;
+}
+.App {
+  text-align: center;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  color: transparent;
+}

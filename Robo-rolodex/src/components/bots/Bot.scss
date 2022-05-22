@@ -1,0 +1,120 @@
+.botsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
+  border: 0.1px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  margin-bottom: 3px;
+  border-style: solid;
+  border-color: lightgray;
+
+  .botButton {
+    color: lightgray;
+    background-color: transparent;
+    position: absolute;
+    font-size: 1.5rem;
+    right: 10px;
+    margin: 2px;
+    border: none;
+    z-index: 99999;
+    cursor: pointer;
+    & :hover {
+      color: black;
+    }
+  }
+
+  .botPic {
+    color: lightgray;
+    justify-content: start;
+    justify-content: space-around;
+    right: 465px;
+    margin: 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+
+  .botInfo {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: fit-content;
+    position: relative;
+  }
+  .botInfo h1 {
+    text-align: left;
+    font-size: 1.9rem;
+    margin: 2px 0 5px 0;
+    font-weight: 900;
+  }
+  .botInfo p {
+    position: relative;
+    left: 20px;
+    text-align: left;
+    font-size: smaller;
+    margin: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    & .botPic {
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+  }
+
+  .tags {
+    display: flex;
+
+    flex-direction: row;
+    margin: 0;
+    text-align: center;
+    border-radius: 5px;
+    div {
+      margin: 10px 5px 0 0;
+      position: relative;
+      left: 20px;
+      width: fit-content;
+      padding: 8px;
+      text-align: center;
+      background-color: lightgray;
+      border-radius: 5px;
+    }
+  }
+
+  .tagSearch {
+    display: flex;
+    position: relative;
+    left: 20px;
+    margin: 3px 0 5px 0;
+    padding: 0;
+    color: black;
+    border-color: lightgray;
+    min-height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
+
+    ::placeholder {
+      color: lightgray;
+    }
+  }
+}
+
+// Mobile Responsive CSS
+
+@media (max-width: 600px) {
+  .botsContainer {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .botsContainer {
+    max-width: 70%;
+  }
+}
