@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { toUpper } from "lodash";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import { toUpper } from 'lodash';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 
-import "./Bot.scss";
+import './Student.scss';
 
-const Bot = ({
+const Student = ({
   company,
-  nameSearchTerm = "",
-  tagSearchTerm = "",
+  nameSearchTerm = '',
+  tagSearchTerm = '',
   email,
   fullName = [],
   grades,
@@ -16,6 +16,7 @@ const Bot = ({
 }) => {
   const [isRendered, setIsRendered] = useState(true);
   const [tags, setTags] = useState([]);
+  const [tagInput, setTagInput] = useState(null);
   const [open, setOpen] = useState(false);
   let gradeArray = [...grades];
 
@@ -25,11 +26,12 @@ const Bot = ({
     intArray.reduce((total, current) => total + current) / intArray.length;
 
   const handleClick = (e) => {
-    if (e.type === "click") setOpen(!open);
+    if (e.type === 'click') setOpen(!open);
   };
   const addTag = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       setTags([...tags, e.target.value]);
+      setTagInput('');
     }
   };
 
@@ -65,13 +67,13 @@ const Bot = ({
 
   return (
     isRendered && (
-      <div className="botsContainer">
-        <button onClick={handleClick} className="botButton">
+      <div className='studentContainer'>
+        <button onClick={handleClick} className='studentButton'>
           {open === true ? <FaMinus /> : <FaPlus />}
         </button>
 
-        <img className="botPic" src={pic} alt={fullName} />
-        <div className="botInfo">
+        <img className='studentPic' src={pic} alt={fullName} />
+        <div className='studentInfo'>
           <h1>{toUpper(`${fullName}`)}</h1>
           <p>Email: {email}</p>
           <p>Company: {company}</p>
@@ -92,18 +94,19 @@ const Bot = ({
               </div>
             </>
           ) : null}
-          <div className="tags">
+          <div className='tags'>
             {tags.length > 0 &&
               tags.map((tag, i) => <div key={i}> {tag} </div>)}
           </div>
           <input
-            className="tagSearch"
+            className='tagSearch'
             onKeyDown={addTag}
-            placeholder="Add a tag"
+            placeholder='Add a tag'
+            value={tagInput}
           />
         </div>
       </div>
     )
   );
 };
-export default Bot;
+export default Student;

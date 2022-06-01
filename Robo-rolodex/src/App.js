@@ -1,10 +1,10 @@
-import BotsDirectory from "./components/directory/BotsDirectory";
-import "./App.css";
+import Directory from './components/directory/StudentsDirectory';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <BotsDirectory />
+    <div className='App'>
+      <Directory />
     </div>
   );
 }

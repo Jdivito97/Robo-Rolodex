@@ -1,7 +1,7 @@
-.botsContainer {
+.studentContainer {
   display: flex;
   flex-wrap: wrap;
-  background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
+  background-image: url('https://www.transparenttextures.com/theme/images/transparent.png');
   border: 0.1px;
   border-top: 0px;
   border-left: 0px;
@@ -10,7 +10,7 @@
   border-style: solid;
   border-color: lightgray;
 
-  .botButton {
+  .studentButton {
     color: lightgray;
     background-color: transparent;
     position: absolute;
@@ -25,7 +25,7 @@
     }
   }
 
-  .botPic {
+  .studentPic {
     color: lightgray;
     justify-content: start;
     justify-content: space-around;
@@ -38,19 +38,19 @@
     width: 80px;
   }
 
-  .botInfo {
+  .studentInfo {
     justify-content: space-around;
     flex-wrap: wrap;
     width: fit-content;
     position: relative;
   }
-  .botInfo h1 {
+  .studentInfo h1 {
     text-align: left;
     font-size: 1.9rem;
     margin: 2px 0 5px 0;
     font-weight: 900;
   }
-  .botInfo p {
+  .studentInfo p {
     position: relative;
     left: 20px;
     text-align: left;
@@ -59,7 +59,7 @@
   }
   &:hover {
     cursor: pointer;
-    & .botPic {
+    & .studentPic {
       transform: scale(1.1);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
